@@ -1,0 +1,208 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Simulateur climat</title>
+</head>
+
+<body class="bg-gray-200">
+
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center">
+        <img src="/favicon.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        <span class="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap dark:text-white">Serre
+          connectée</span>
+      </a>
+      <div class=" w-auto justify-between" id="navbar-default">
+        <ul class=" flex flex-row p-2 sm:p-0 sm:space-x-8  sm:border-0 dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/"
+              class="block py-2 pl-3 pr-4 text-gray-900  hover:bg-gray-100 sm:hover:bg-transparent sm:border-0 sm:hover:text-blue-700 sm:p-0 dark:text-white sm:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white sm:dark:hover:bg-transparent">Scénario</a>
+          </li>
+          <li>
+            <a href="/data.csv"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 sm:hover:bg-transparent sm:border-0 sm:hover:text-blue-700 sm:p-0 dark:text-white sm:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white sm:dark:hover:bg-transparent">Data</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="text-4xl text-center my-5 font-bold">Enregistrement des données</h1>
+  <div class="text-center">
+    <h3 class="m-4 text-lg"> Pour remplir rapidemnt le tableau de données sur pc utilisez la touche <kbd
+        class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">Tab</kbd>
+      de votre clavier. Pour passer de champs en champs.</h3>
+  </div>
+  <div class="flex justify-center items-center">
+    <form method="POST" action="/submit">
+      <table class="table-auto text-center">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Température °C</th>
+            <th>Humidité %</th>
+            <th>Précipitation mm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label> 0:00</label></td>
+            <td><input required type="number" name="temperature_0" step="0.1"></td>
+            <td><input required type="number" name="humidity_0" step="0.1"></td>
+            <td><input required type="number" name="precipitation_0" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 1:00</label></td>
+            <td><input required type="number" name="temperature_1" step="0.1"></td>
+            <td><input required type="number" name="humidity_1" step="0.1"></td>
+            <td><input required type="number" name="precipitation_1" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 2:00</label></td>
+            <td><input required type="number" name="temperature_2" step="0.1"></td>
+            <td><input required type="number" name="humidity_2" step="0.1"></td>
+            <td><input required type="number" name="precipitation_2" step="0.1"></td>
+          </tr>
+
+          <tr>
+            <td><label> 3:00</label></td>
+            <td><input required type="number" name="temperature_3" step="0.1"></td>
+            <td><input required type="number" name="humidity_3" step="0.1"></td>
+            <td><input required type="number" name="precipitation_3" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 4:00</label></td>
+            <td><input required type="number" name="temperature_4" step="0.1"></td>
+            <td><input required type="number" name="humidity_4" step="0.1"></td>
+            <td><input required type="number" name="precipitation_4" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 5:00</label></td>
+            <td><input required type="number" name="temperature_5" step="0.1"></td>
+            <td><input required type="number" name="humidity_5" step="0.1"></td>
+            <td><input required type="number" name="precipitation_5" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 6:00</label></td>
+            <td><input required type="number" name="temperature_6" step="0.1"></td>
+            <td><input required type="number" name="humidity_6" step="0.1"></td>
+            <td><input required type="number" name="precipitation_6" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 7:00</label></td>
+            <td><input required type="number" name="temperature_7" step="0.1"></td>
+            <td><input required type="number" name="humidity_7" step="0.1"></td>
+            <td><input required type="number" name="precipitation_7" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 8:00</label></td>
+            <td><input required type="number" name="temperature_8" step="0.1"></td>
+            <td><input required type="number" name="humidity_8" step="0.1"></td>
+            <td><input required type="number" name="precipitation_8" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 9:00</label></td>
+            <td><input required type="number" name="temperature_9" step="0.1"></td>
+            <td><input required type="number" name="humidity_9" step="0.1"></td>
+            <td><input required type="number" name="precipitation_9" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 10:00</label></td>
+            <td><input required type="number" name="temperature_10" step="0.1"></td>
+            <td><input required type="number" name="humidity_10" step="0.1"></td>
+            <td><input required type="number" name="precipitation_10" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 11:00</label></td>
+            <td><input required type="number" name="temperature_11" step="0.1"></td>
+            <td><input required type="number" name="humidity_11" step="0.1"></td>
+            <td><input required type="number" name="precipitation_11" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 12:00</label></td>
+            <td><input required type="number" name="temperature_12" step="0.1"></td>
+            <td><input required type="number" name="humidity_12" step="0.1"></td>
+            <td><input required type="number" name="precipitation_12" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 13:00</label></td>
+            <td><input required type="number" name="temperature_13" step="0.1"></td>
+            <td><input required type="number" name="humidity_13" step="0.1"></td>
+            <td><input required type="number" name="precipitation_13" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 14:00</label></td>
+            <td><input required type="number" name="temperature_14" step="0.1"></td>
+            <td><input required type="number" name="humidity_14" step="0.1"></td>
+            <td><input required type="number" name="precipitation_14" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 15:00</label></td>
+            <td><input required type="number" name="temperature_15" step="0.1"></td>
+            <td><input required type="number" name="humidity_15" step="0.1"></td>
+            <td><input required type="number" name="precipitation_15" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 16:00</label></td>
+            <td><input required type="number" name="temperature_16" step="0.1"></td>
+            <td><input required type="number" name="humidity_16" step="0.1"></td>
+            <td><input required type="number" name="precipitation_16" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 17:00</label></td>
+            <td><input required type="number" name="temperature_17" step="0.1"></td>
+            <td><input required type="number" name="humidity_17" step="0.1"></td>
+            <td><input required type="number" name="precipitation_17" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 18:00</label></td>
+            <td><input required type="number" name="temperature_18" step="0.1"></td>
+            <td><input required type="number" name="humidity_18" step="0.1"></td>
+            <td><input required type="number" name="precipitation_18" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 19:00</label></td>
+            <td><input required type="number" name="temperature_19" step="0.1"></td>
+            <td><input required type="number" name="humidity_19" step="0.1"></td>
+            <td><input required type="number" name="precipitation_19" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 20:00</label></td>
+            <td><input required type="number" name="temperature_20" step="0.1"></td>
+            <td><input required type="number" name="humidity_20" step="0.1"></td>
+            <td><input required type="number" name="precipitation_20" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 21:00</label></td>
+            <td><input required type="number" name="temperature_21" step="0.1"></td>
+            <td><input required type="number" name="humidity_21" step="0.1"></td>
+            <td><input required type="number" name="precipitation_21" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 22:00</label></td>
+            <td><input required type="number" name="temperature_22" step="0.1"></td>
+            <td><input required type="number" name="humidity_22" step="0.1"></td>
+            <td><input required type="number" name="precipitation_22" step="0.1"></td>
+          </tr>
+          <tr>
+            <td><label> 23:00</label></td>
+            <td><input required type="number" name="temperature_23" step="0.1"></td>
+            <td><input required type="number" name="humidity_23" step="0.1"></td>
+            <td><input required type="number" name="precipitation_23" step="0.1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex justify-center items-center m-5">
+        <input
+          class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          type="submit" value="Enregistrement">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
